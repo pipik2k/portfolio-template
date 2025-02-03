@@ -20,17 +20,16 @@ const Seperator = styled.div`
   opacity: 0.2;
 `;
 
-const MainPage: React.FC = () => {
-  return (
-    <GamesContainer>
-      {games.map((game, index) => (
-        <>
-        <Game key={index} game={game} />
-        <Seperator/>
-        </>
-      ))}
-    </GamesContainer>
-  );
-};
+const MainPage: React.FC = () => (
+  <GamesContainer>
+    {games.map((game, index) => (
+      <React.Fragment key={index}>
+        <Game game={game} />
+        {index !== games.length - 1 && <Seperator />}
+      </React.Fragment>
+    ))}
+  </GamesContainer>
+);
+
 
 export default MainPage;

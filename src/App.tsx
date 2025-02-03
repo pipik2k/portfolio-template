@@ -6,6 +6,7 @@ import ContactPage from "./Pages/ContactPage";
 import SelfSummary from "./Components/SelfSummary";
 import AboutMe from "./Pages/AboutMe";
 import { Column } from "./Styles/StyledComponents";
+import Footer from "./Components/Footer";
 
 const AppContainer = styled(Column)`
   padding: 60px;
@@ -71,6 +72,7 @@ const App: React.FC = () => {
           <Route path="/about-me" element={<AboutMe />} />
         </Routes>
       </AppContainer>
+        <Footer/>
     </Router>
   );
 };
