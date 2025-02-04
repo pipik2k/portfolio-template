@@ -9,8 +9,8 @@ import { Column } from "./Styles/StyledComponents";
 import Footer from "./Components/Footer";
 
 const AppContainer = styled(Column)`
+  min-height: 90vh;
   padding: 60px;
-  padding-bottom: 20px;
   gap: 30px;
 
   @media (max-width: 768px) {
@@ -72,7 +72,7 @@ const App: React.FC = () => {
           <Route path="/about-me" element={<AboutMe />} />
         </Routes>
       </AppContainer>
-        <Footer/>
+      <Footer />
     </Router>
   );
 };
