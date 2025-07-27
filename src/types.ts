@@ -1,6 +1,8 @@
 export enum LinkImageSource {
   Github = "/images/logos/github.png",
   ItchIo = "/images/logos/itch.io.png",
+  CHPlay = "/images/logos/chplay.png",
+  Zalo = "images/logos/zalo.png"
 }
 
 export enum Platform {

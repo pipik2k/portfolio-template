@@ -1,8 +1,8 @@
 import { AboutMeData, Game, GameEngine, LinkImageSource, MediaType, Platform } from "./types";
 
 export const PersonalInfo: AboutMeData = {
-  name: "YOUR_NAME",
-  role: "YOUR_ROLE",
+  name: "Quốc Khánh",
+  role: "Unity Developer",
   introduction: "SHORT_INTRODUCTION",
   description: "TELL_ABOUT_YOURSELF",
   image: `${process.env.PUBLIC_URL}/images/Profile.jpg`,
@@ -16,14 +16,13 @@ export const PersonalInfo: AboutMeData = {
 
 export const games: Game[] = [
   {
-    name: "GAME_NAME",
+    name: "MR Ragdoll",
     description: "GAME_DESCRIPTION",
-    genres: ["GAME_GENRE", "GAME_GENRE..."],
-    platforms: [Platform.Windows],
+    genres: ["Action", "Batlle"],
+    platforms: [Platform.Android],
     engine: GameEngine.Unity,
     links: [
-      { source: LinkImageSource.Github, url: "https://github.com/YOUR_REPO" },
-      { source: LinkImageSource.ItchIo, url: "https://YOUR_ITCH.itch.io/GAME_NAME" },
+      { source: LinkImageSource.CHPlay, url: "https://play.google.com/store/apps/details?id=com.ten.joints.mr.ragdoll.funny.fight&hl=en_IE" },
     ],
     media: [
       { source: "/images/games/GAME_NAME/Screenshot_1.png", type: MediaType.Image },
