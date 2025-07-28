@@ -25,7 +25,7 @@ export const games: Game[] = [
       { source: LinkImageSource.CHPlay, url: "https://play.google.com/store/apps/details?id=com.ten.joints.mr.ragdoll.funny.fight&hl=en_IE" },
     ],
     media: [
-      { source: "https://www.youtube.com/watch?v=SyfMZUru2vA", type: MediaType.YouTube },
+      { source: "https://www.youtube.com/embed/SyfMZUru2vA", type: MediaType.YouTube },
       { source: "/images/games/StickBoost/Screenshot_1.png", type: MediaType.Image },
       { source: "/images/games/StickBoost/Screenshot_2.png", type: MediaType.Image },
       { source: "/images/games/StickBoost/Screenshot_3.png", type: MediaType.Image },
@@ -38,10 +38,10 @@ export const games: Game[] = [
     platforms: [Platform.Android],
     engine: GameEngine.Unity,
     links: [
-	{ source: LinkImageSource.CHPlay, url: "https://play.google.com/store/apps/details?id=com.cfs.gg.which.team.win" },
+      { source: LinkImageSource.CHPlay, url: "https://play.google.com/store/apps/details?id=com.cfs.gg.which.team.win" },
     ],
     media: [
-      { source: "https://www.youtube.com/watch?v=o5ZGHw-x_dM&t=131s", type: MediaType.YouTube },
+      { source: "https://www.youtube.com/embed/o5ZGHw-x_dM", type: MediaType.YouTube },
       { source: "/images/games/WhichTeamWin/Screenshot_1.png", type: MediaType.Image },
       { source: "/images/games/WhichTeamWin/Screenshot_2.png", type: MediaType.Image },
       { source: "/images/games/WhichTeamWin/Screenshot_3.png", type: MediaType.Image },
@@ -55,10 +55,10 @@ export const games: Game[] = [
     platforms: [Platform.Android],
     engine: GameEngine.Unity,
     links: [
-	{ source: LinkImageSource.Github, url: "https://github.com/pipik2k/FindTheWater" },
+      { source: LinkImageSource.Github, url: "https://github.com/pipik2k/FindTheWater" },
     ],
     media: [
-      { source: "https://www.youtube.com/watch?v=uIn061JPrig", type: MediaType.YouTube },
+      { source: "https://www.youtube.com/embed/uIn061JPrig", type: MediaType.YouTube },
       { source: "/images/games/FindTheWater/Screenshot_1.png", type: MediaType.Image },
       { source: "/images/games/FindTheWater/Screenshot_2.png", type: MediaType.Image },
     ],
@@ -73,7 +73,7 @@ export const games: Game[] = [
       { source: LinkImageSource.ItchIo, url: "https://pipik2k.itch.io/stickboost" },
     ],
     media: [
-      { source: "https://www.youtube.com/watch?v=n9gZ6u2DqYc", type: MediaType.YouTube },
+      { source: "https://www.youtube.com/embed/n9gZ6u2DqYc", type: MediaType.YouTube },
       { source: "/images/games/StickBoost/Screenshot_1.png", type: MediaType.Image },
       { source: "/images/games/StickBoost/Screenshot_2.png", type: MediaType.Image },
       { source: "/images/games/StickBoost/Screenshot_3.png", type: MediaType.Image },
@@ -89,7 +89,7 @@ export const games: Game[] = [
       { source: LinkImageSource.Github, url: "https://github.com/pipik2k/StickManJetPack" },
     ],
     media: [
-      { source: "https://www.youtube.com/watch?v=JxRtxLzQ9pA", type: MediaType.YouTube },
+      { source: "https://www.youtube.com/embed/JxRtxLzQ9pA", type: MediaType.YouTube },
       { source: "/images/games/StickmanJetpack/Screenshot_1.png", type: MediaType.Image },
       { source: "/images/games/StickmanJetpack/Screenshot_2.png", type: MediaType.Image },
       { source: "/images/games/StickmanJetpack/Screenshot_3.png", type: MediaType.Image },
@@ -105,26 +105,10 @@ export const games: Game[] = [
       { source: LinkImageSource.Github, url: "https://github.com/pipik2k/MagicBall" },
     ],
     media: [
-      { source: "https://www.youtube.com/watch?v=dwynUotenWs", type: MediaType.YouTube },
+      { source: "https://www.youtube.com/embed/dwynUotenWs", type: MediaType.YouTube },
       { source: "/images/games/MagicBall/Screenshot_1.png", type: MediaType.Image },
       { source: "/images/games/MagicBall/Screenshot_2.png", type: MediaType.Image },
       { source: "/images/games/MagicBall/Screenshot_3.png", type: MediaType.Image },
     ],
   },
-  /*{
-    name: "Fruits Game",
-    description: "A fun and colorful game where you slice and collect fruits for high scores.",
-    genres: ["Arcade", "Casual"],
-    platforms: [Platform.Android],
-    engine: GameEngine.Unity,
-    links: [
-      { source: LinkImageSource.CHPlay, url: "https://play.google.com/store/apps/details?id=com.example.fruitsgame" },
-    ],
-    media: [
-      { source: "https://www.youtube.com/watch?v=FRUITSGAME_VIDEO_ID", type: MediaType.YouTube },
-      { source: "/images/games/FruitsGame/Screenshot_1.png", type: MediaType.Image },
-      { source: "/images/games/FruitsGame/Screenshot_2.png", type: MediaType.Image },
-      { source: "/images/games/FruitsGame/Screenshot_3.png", type: MediaType.Image },
-    ],
-  }*/
 ];
