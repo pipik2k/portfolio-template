@@ -15,6 +15,75 @@ export const PersonalInfo: AboutMeData = {
 };
 
 export const games: Game[] = [
+    {
+    name: "Mr Ragdoll",
+    description: "The Physics Ragdoll 3D using Joints and Force to make funny gameplay, include byecycle and tounge",
+    genres: ["Action", "Batlle"],
+    platforms: [Platform.Android],
+    engine: GameEngine.Unity,
+    links: [
+      { source: LinkImageSource.CHPlay, url: "https://play.google.com/store/apps/details?id=com.ten.joints.mr.ragdoll.funny.fight&hl=en_IE" },
+    ],
+    media: [
+      { source: "https://www.youtube.com/embed/SyfMZUru2vA", type: MediaType.YouTube },
+      { source: "/images/games/MrRagdoll/Screenshot_1.png", type: MediaType.Image },
+      { source: "/images/games/MrRagdoll/Screenshot_2.png", type: MediaType.Image },
+      { source: "/images/games/MrRagdoll/Screenshot_3.png", type: MediaType.Image },
+    ],
+    },
+
+    {
+    name: "Which Team Win",
+    description: "The most wonderful part i used to learn from this project is hybrid ECS, which make the code x5 faster. There are few screenshots about the difference between ECS and Mono which use anaysys profiler for testing",
+    genres: ["Strategy"],
+    platforms: [Platform.Android],
+    engine: GameEngine.Unity,
+    links: [
+      { source: LinkImageSource.CHPlay, url: "https://play.google.com/store/apps/details?id=com.cfs.gg.which.team.win" },
+    ],
+    media: [
+      { source: "https://www.youtube.com/embed/o5ZGHw-x_dM", type: MediaType.YouTube },
+      { source: "/images/games/WhichTeamWin/Screenshot_1.png", type: MediaType.Image },
+      { source: "/images/games/WhichTeamWin/Screenshot_2.png", type: MediaType.Image },
+      { source: "/images/games/WhichTeamWin/Screenshot_3.png", type: MediaType.Image },
+      { source: "/images/games/WhichTeamWin/Screenshot_4.png", type: MediaType.Image },
+    ],
+   },
+
+   {
+    name: "CupHead",
+      description: "A project with lighning, god ray particle, old film grain effect combine",
+      genres: ["Platform", "Adventure"],
+      platforms: [Platform.Windows],
+      engine: GameEngine.Unity,
+      links: [
+        { source: LinkImageSource.Github, url: "https://github.com/pipik2k/CupHead" },
+      ],
+      media: [
+        { source: "https://www.youtube.com/embed/jhwuggSz2Mk", type: MediaType.YouTube },
+        { source: "/images/games/CupHead/Screenshot_1.png", type: MediaType.Image },
+        { source: "/images/games/CupHead/Screenshot_2.png", type: MediaType.Image },
+        { source: "/images/games/CupHead/Screenshot_3.png", type: MediaType.Image },
+      ],
+   },
+
+    {
+    name: "Memory Halloween Game",
+      description: "Challenge your memory in a chilling Halloween experience filled with spooky surprises and eerie atmosphere. How far can you go before the darkness catches up",
+      genres: ["Puzzle"],
+      platforms: [Platform.Windows],
+      engine: GameEngine.Unity,
+      links: [
+        { source: LinkImageSource.Github, url: "https://github.com/pipik2k/HalloweenMemoryGame" },
+      ],
+      media: [
+        { source: "https://www.youtube.com/embed/mt1ALIdXIns", type: MediaType.YouTube },
+        { source: "/images/games/MemoryHalloweenGame/Screenshot_1.png", type: MediaType.Image },
+        { source: "/images/games/MemoryHalloweenGame/Screenshot_2.png", type: MediaType.Image },
+        { source: "/images/games/MemoryHalloweenGame/Screenshot_3.png", type: MediaType.Image },
+      ],
+  },
+
   {
     name: "Magic Ball",
       description: "A puzzle game where you control a magic ball to solve physics-based challenges.",
@@ -31,19 +100,7 @@ export const games: Game[] = [
         { source: "/images/games/MagicBall/Screenshot_3.png", type: MediaType.Image },
       ],
   },
-  {
-    name: "Sudoku",
-    description: "Simple Sudoku clone myself without audio or complex logic",
-    genres: ["Puzzle"],
-    platforms: [Platform.Android],
-    engine: GameEngine.Unity,
-    links: [
-      { source: LinkImageSource.Github, url: "https://github.com/pipik2k/Sudoku" },
-    ],
-    media: [
-      { source: "https://www.youtube.com/embed/hpGQdo0GIBs", type: MediaType.YouTube },
-    ],
-  },
+ 
   {
     name: "Find The Water",
     description: "Fast Prototype pipe water game i made in 3 days",
@@ -59,40 +116,7 @@ export const games: Game[] = [
       { source: "/images/games/FindTheWater/Screenshot_2.png", type: MediaType.Image },
     ],
   },
-  {
-    name: "MR Ragdoll",
-    description: "The Physics Ragdoll 3D using Joints and Force to make funny gameplay, include byecycle and tounge",
-    genres: ["Action", "Batlle"],
-    platforms: [Platform.Android],
-    engine: GameEngine.Unity,
-    links: [
-      { source: LinkImageSource.CHPlay, url: "https://play.google.com/store/apps/details?id=com.ten.joints.mr.ragdoll.funny.fight&hl=en_IE" },
-    ],
-    media: [
-      { source: "https://www.youtube.com/embed/SyfMZUru2vA", type: MediaType.YouTube },
-      { source: "/images/games/MrRagdoll/Screenshot_1.png", type: MediaType.Image },
-      { source: "/images/games/MrRagdoll/Screenshot_2.png", type: MediaType.Image },
-      { source: "/images/games/MrRagdoll/Screenshot_3.png", type: MediaType.Image },
-    ],
-  },
 
-  {
-    name: "Which Team Win",
-    description: "The most wonderful part i used to learn from this project is hybrid ECS, which make the code x5 faster. There are few screenshots about the difference between ECS and Mono which use anaysys profiler for testing",
-    genres: ["Strategy"],
-    platforms: [Platform.Android],
-    engine: GameEngine.Unity,
-    links: [
-      { source: LinkImageSource.CHPlay, url: "https://play.google.com/store/apps/details?id=com.cfs.gg.which.team.win" },
-    ],
-    media: [
-      { source: "https://www.youtube.com/embed/o5ZGHw-x_dM", type: MediaType.YouTube },
-      { source: "/images/games/WhichTeamWin/Screenshot_1.png", type: MediaType.Image },
-      { source: "/images/games/WhichTeamWin/Screenshot_2.png", type: MediaType.Image },
-      { source: "/images/games/WhichTeamWin/Screenshot_3.png", type: MediaType.Image },
-      { source: "/images/games/WhichTeamWin/Screenshot_4.png", type: MediaType.Image },
-    ],
-  },
    {
     name: "John Man",
     description: "Support ideas with Iap purchase, gameplay, testing Game logic. Analyze retention on Daily active user, learn active Ragdoll base from this source",
@@ -110,6 +134,7 @@ export const games: Game[] = [
       { source: "/images/games/JohnMan/Screenshot_4.png", type: MediaType.Image },
     ],
   },
+
   {
     name: "StickBoost",
     description: "A fast-paced stickman game where you boost through obstacles and collect power-ups.",
@@ -126,6 +151,7 @@ export const games: Game[] = [
       { source: "/images/games/StickBoost/Screenshot_3.png", type: MediaType.Image },
     ],
   },
+
   {
     name: "Stickman Jetpack",
     description: "Guide your stickman with a jetpack through challenging levels and avoid obstacles.",
@@ -142,4 +168,33 @@ export const games: Game[] = [
       { source: "/images/games/StickmanJetpack/Screenshot_3.png", type: MediaType.Image },
     ],
   },
+
+     {
+    name: "Shiny Merge Ball",
+    description: "Merge Ball Game",
+    genres: ["Puzzle"],
+    platforms: [Platform.Android],
+    engine: GameEngine.Unity,
+    links: [
+      { source: LinkImageSource.Github, url: "https://github.com/pipik2k/ShinyMergeBall" },
+    ],
+    media: [
+      { source: "https://www.youtube.com/shorts/MGYt6vzWnjk", type: MediaType.YouTube },
+    ],
+  },
+
+   {
+    name: "Sudoku",
+    description: "Simple Sudoku clone myself without audio or complex logic",
+    genres: ["Puzzle"],
+    platforms: [Platform.Android],
+    engine: GameEngine.Unity,
+    links: [
+      { source: LinkImageSource.Github, url: "https://github.com/pipik2k/Sudoku" },
+    ],
+    media: [
+      { source: "https://www.youtube.com/embed/hpGQdo0GIBs", type: MediaType.YouTube },
+    ],
+  },
+
 ];
