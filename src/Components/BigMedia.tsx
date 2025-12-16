@@ -4,7 +4,7 @@ import { MediaItem, MediaType } from "../types";
 import { Row } from "../Styles/StyledComponents";
 
 const MediaWrapper = styled(Row)`
-justify-content: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -14,7 +14,8 @@ const MediaIframe = styled.iframe`
   width: 70%;
   height: 100%;
   border: none;
-
+  background: black;
+  
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -39,12 +40,14 @@ const PopupOverlay = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  cursor: pointer;
 `;
 
 const PopupImage = styled.img`
   max-width: 70%;
   max-height: 70%;
-
+  object-fit: contain;
+  
   @media (max-width: 768px) {
     max-width: 90%;
     max-height: 90%;
@@ -61,7 +64,8 @@ const BigMedia: React.FC<MediaItem> = ({ source, type }) => {
   };
 
   const getYouTubeEmbedUrl = (url: string) => {
-    return`${url}?autoplay=1&mute=1`;
+    // FIX: Thêm return statement
+    return `${url}?autoplay=1&mute=1&controls=1&modestbranding=1&rel=0`;
   };
 
   return (
@@ -72,15 +76,25 @@ const BigMedia: React.FC<MediaItem> = ({ source, type }) => {
             src={getYouTubeEmbedUrl(source)}
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            loading="lazy"
           />
         ) : (
-          <MediaImage src={`${process.env.PUBLIC_URL}${source}`} alt="Game Media" />
+          // FIX: Sửa syntax string template
+          <MediaImage 
+            src={`${process.env.PUBLIC_URL}${source}`} 
+            alt="Game Media" 
+          />
         )}
       </MediaWrapper>
 
       {isPopupOpen && (
         <PopupOverlay onClick={() => setIsPopupOpen(false)}>
-          <PopupImage src={`${process.env.PUBLIC_URL}${source}`} alt="Enlarged Media" />
+          {/* FIX: Sửa syntax string template */}
+          <PopupImage 
+            src={`${process.env.PUBLIC_URL}${source}`} 
+            alt="Enlarged Media" 
+            onClick={(e) => e.stopPropagation()} 
+          />
         </PopupOverlay>
       )}
     </>

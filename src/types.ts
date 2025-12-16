@@ -41,13 +41,33 @@ export interface AboutMeData {
   };
 }
 
+export interface Contribution {
+    title: string;
+    description: string;
+    icon?: string;
+}
+
+export interface TechnicalHighlight {
+    title: string;
+    details: string[];
+}
 export interface Game {
   name: string;
-  description: string;
   genres: string[];
   source?: { name: string; url: string };
   links: { source: LinkImageSource; url: string }[];
   media: MediaItem[];
   platforms: Platform[];
   engine: GameEngine;
+  detailedInfo: {
+        overview: string;
+        myRole: string;
+        contributions: Contribution[]; 
+        technicalHighlights?: TechnicalHighlight[]; 
+        challenges?: string[]; 
+        learnings?: string[]; 
+        duration?: string; 
+        teamSize?: string; 
+    };
+
 }

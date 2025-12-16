@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Column } from '../Styles/StyledComponents';
 
+// --- 1. STYLED COMPONENTS (Cập nhật màu Zalo và tên nút) ---
+
 const CenterContainer = styled(Column)`
   align-items: center;
   margin-top: 80px;
@@ -14,7 +16,7 @@ const CenterContainer = styled(Column)`
 const ContactContainer = styled(Column)`
   width: 30vw;
   padding: 30px 60px;
-    align-items: center;
+  align-items: center;
 
   background-color: #121212;
   border-radius: 10px;
@@ -25,6 +27,7 @@ const ContactContainer = styled(Column)`
     padding: 10px 30px;
   }
 `;
+
 const Title = styled.h2`
   margin: 30px;
   
@@ -58,7 +61,9 @@ const TextArea = styled.textarea`
 const Button = styled.button`
   padding: 10px 20px;
   margin: 20px 0;
-  background-color: #25d366;
+  
+  // 🎯 SỬA: Màu xanh Zalo
+  background-color: #0076ff; 
   color: white;
   border: none;
   border-radius: 5px;
@@ -66,17 +71,30 @@ const Button = styled.button`
   cursor: pointer;
   
   &:hover {
-    background-color: #1da851;
+    // 🎯 SỬA: Màu hover Zalo
+    background-color: #0060cc; 
   }
 `;
 
 const ContactMe: React.FC = () => {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
+  
+  // 🎯 THAY THẾ bằng ID Zalo hoặc số điện thoại đã liên kết
+  const ZALO_TARGET = 'YOUR_ZALO_ID_OR_PHONE_NUMBER'; 
 
   const handleSubmit = () => {
-    const formattedMessage = `Hey my name is ${name}\n${message}`;
-    const url = `https://wa.me/${process.env.REACT_APP_WA_NUMBER}?text=${encodeURIComponent(formattedMessage)}`;
+    // 1. Định dạng tin nhắn (Không cần encodeURIComponent cho \n trong Zalo)
+    const formattedMessage = `Xin chào, tôi là ${name}.%0A%0A${message}`;
+    
+    // 2. Định dạng URL Zalo
+    // Dạng 1: Mở chat trực tiếp qua ID Zalo (Dạng phổ biến nhất để liên hệ)
+    // Cần thay ID Zalo (ví dụ: '1234567890') vào biến ZALO_TARGET
+    const url = `https://zalo.me/s/${ZALO_TARGET}?text=${formattedMessage}`;
+    
+    // Dạng 2: Gọi số điện thoại Zalo (Nếu ZALO_TARGET là số điện thoại)
+    // const url = `https://zalo.me/call?phone=${ZALO_TARGET}`;
+
     window.open(url, '_blank');
   };
 
@@ -86,16 +104,16 @@ const ContactMe: React.FC = () => {
         <Title>Contact Me</Title>
         <Input
           type="text"
-          placeholder="Your Name"
+          placeholder="Tên của bạn"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <TextArea
-          placeholder="Your Message"
+          placeholder="Tin nhắn của bạn"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
-        <Button onClick={handleSubmit}>Send via WhatsApp</Button>
+        <Button onClick={handleSubmit}>💬 Gửi Tin Nhắn Zalo</Button>
       </ContactContainer>
     </CenterContainer>
   );
